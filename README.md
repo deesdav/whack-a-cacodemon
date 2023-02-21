@@ -1,2 +1,2 @@
 # whack-a-doom
-[Play]()
+[Play](https://deesdav.github.io/whack-a-doom/)
