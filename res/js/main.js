@@ -1,4 +1,7 @@
 const play = document.getElementById("play");
+const info = document.getElementById("info");
+const infoContent = document.getElementById("infoContent");
+const molePlay = document.getElementById("molePlay");
 const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
 const gameBox = document.getElementById("gameBox");
@@ -9,7 +12,7 @@ const speedText = document.getElementById("speedText");
 
 const rounds = document.querySelectorAll(".round");
 const gameArea9x9 = document.getElementById("gameArea9x9");
-const lunars = document.querySelectorAll(".lunar");
+const cacos = document.querySelectorAll(".caco");
 const score = document.querySelector("#score");
 const speed = document.querySelector("#speed");
 
@@ -19,6 +22,12 @@ musicButton.onmousedown = () => {
 musicButton.onmouseover = () => {
   music.src = "";
 };
+
+info.onclick = () => {
+  backButton.style.display = "block";
+  infoContent.style.display = "block";
+  info.style.display = "none";
+}
 play.onclick = () => {
   music.src = "https://www.youtube.com/embed/EQmIBHObtCs?autoplay=1";
   mainStartingContent.style.display = "none";
@@ -26,11 +35,11 @@ play.onclick = () => {
   scoreText.style.display = "block";
   speedText.style.display = "block";
   gameArea9x9.style.display = "flex";
-  document.body.style.backgroundImage = "none";
   document.body.style.backgroundImage = "url(./res/img/background.jpg)";
-  document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundAttachment = "fixed";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.transition = ".5s all";
+  
 };
 backButton.onclick = () => {
   music.src = "";
@@ -39,10 +48,12 @@ backButton.onclick = () => {
   scoreText.style.display = "none";
   speedText.style.display = "none";
   gameArea9x9.style.display = "none";
-  document.body.style.backgroundRepeat = "";
-  document.body.style.backgroundSize = "";
-  document.body.style.backgroundAttachment = "";
+  document.body.style.backgroundSize = "65%";
+  document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.backgroundImage = "url(./res/img/background.gif)";
+  document.body.style.transition = "0s";
+  infoContent.style.display = "none";
+  info.style.display = "block";
 };
 
 let result = 0;
@@ -51,11 +62,11 @@ let timerId = 0;
 
 function randomRound() {
   [...rounds].forEach((round) => {
-    round.classList.remove("lunar");
+    round.classList.remove("caco");
   });
 
   const randomRound = rounds[Math.floor(Math.random() * 6)];
-  randomRound.classList.add("lunar");
+  randomRound.classList.add("caco");
 
   strikePosi = randomRound.id;
 }
@@ -97,13 +108,17 @@ speed.innerHTML = randomLimit + " ms";
 
 window.onload = () => {
   console.log(randomLimit);
-  alert(
-    "this game has a random speed, so sometimes you can have slow speed or fast speed of a lunar."
-  );
 };
 
-function moveLunar() {
+function movecaco() {
   timerId = setInterval(randomRound, randomLimit);
 }
 
-moveLunar();
+movecaco();
+
+molePlay.onmouseover = () => {
+  music.src = "https://www.youtube.com/embed/pDKvYBTZ1i4?autoplay=1";
+}
+molePlay.onmouseout = () => {
+  music.src = "";
+}

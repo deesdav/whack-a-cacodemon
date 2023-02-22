@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
 
 * {
     user-select: none;
@@ -6,7 +7,7 @@
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
-    transition: .5s all;
+    image-rendering: auto;
 }
 
 body,
@@ -19,7 +20,9 @@ body {
     background-image: url(../img/background.gif);
     background-color: black;
     background-position: center;
-    
+    background-attachment: fixed;
+    transition: .5s all;
+    background-size: 65%;
     height: 100vh;
 
 }
@@ -32,7 +35,6 @@ body {
     border: 1px solid black;
     width: auto;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.555);
 }
 
 h1 {
@@ -40,8 +42,82 @@ h1 {
     top: 200px;
     font-size: 50px;
     color: white;
-    text-shadow: 2px 2px 2px red;
+    text-shadow: 2px 2px 2px #F11514;
     text-align: center;
+}
+
+#info {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    transition: .5s ease;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 1em;
+    text-shadow: 2px 2px 2px red;
+
+}
+
+#info:hover {
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    text-shadow: none;
+    transition: .5s;
+}
+
+#infoContent {
+    background-color: rgb(3, 3, 3);
+    color: white;
+    text-shadow: 0 0 25px #F11514;
+    width: auto;
+    height: 100vh;
+    padding: 1em;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: .5s all;
+}
+
+.ps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.ps p {
+    width: 50%;
+
+}
+
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.imgs img {
+    width: 33.33%;
+    padding: 1em;
+    height: 490px;
+    transform: scale(0.4);
+    transition: .5s;
+    image-orientation: flip;
+}
+.imgs img:hover {
+    transition: .5s;
+    box-shadow: 0 0 20px #F11514;
 }
 
 #play {
@@ -52,32 +128,39 @@ h1 {
     text-align: center;
     margin: auto;
     transition: .5s ease;
+    transition: .2s all;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 1em;
+    text-shadow: 2px 2px 2px #F11514;
+}
+
+#molePlay a {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    transition: .5s ease;
     cursor: pointer;
     font-size: large;
     border-radius: 1em;
     text-shadow: 2px 2px 2px red;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    text-decoration: none;
+    font-family: 'Domine', serif;
 }
 
-#quote {
-    font-size: large;
-    text-shadow: 2px 2px 2px red;
-    margin: auto;
-    color: white;
-    position: absolute;
-    bottom: 175px;
-    width: 500px;
-    text-align: center;
-}
-
-#subheadline {
-    font-size: large;
-    text-shadow: 2px 2px 2px red;
-    margin: auto;
-    color: white;
-    position: absolute;
-    bottom: 50px;
-    width: 500px;
-    text-align: center;
+#molePlay a:hover {
+    transform: scale(1.1);
+    border-radius: 2em;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    text-shadow: none;
 }
 
 a {
@@ -104,7 +187,7 @@ a {
 }
 
 #clickOnMe {
-    text-shadow: 0 1px 0px red;
+    text-shadow: 0 1px 0px #F11514;
     display: block;
     position: absolute;
     left: 400px;
@@ -160,7 +243,7 @@ a {
     color: white;
     display: none;
     font-size: x-large;
-    text-shadow: 0 0 25px red;
+    text-shadow: 0 0 25px #F11514;
 }
 
 #speedText {
@@ -170,61 +253,65 @@ a {
     color: white;
     display: none;
     font-size: x-large;
-    text-shadow: 0 0 25px red;
+    text-shadow: 0 0 25px #F11514;
 }
 
 #scoreText span {
-    text-shadow: 0 0 25px red;
+    text-shadow: 0 0 25px #F11514;
 }
 
 #speedText span {
-    text-shadow: 0 0 25px red;
+    text-shadow: 0 0 25px #F11514;
 }
 
 
 #gameArea9x9 {
-    padding-top: 82px;
+    padding-top: 90px;
     width: 625px;
     height: 625px;
     display: none;
     gap: 10px;
     flex-wrap: wrap;
     margin: auto;
-    cursor: none;
+    cursor: url(../img/cursor.crucible.png), auto;
 }
 
 .round {
     height: 200px;
     width: 200px;
-    cursor: url(../img/cursor.crucible.png), auto;
+
 }
-.round:hover{
+
+.round:hover {
     transform: rotate(3deg);
+
 }
 
 
 
 
 
-.lunar {
+.caco {
     background-image: url(../img/caco.png);
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
-   
-}
-.crucible{
-    background:gray;
-    width:200px;
-    height:200px;
-   
+    cursor: url(../img/cursor.crucible.png), auto;
 }
 
+.crucible {
+    background: gray;
+    width: 200px;
+    height: 200px;
+
+}
 
 
-.lunar:hover {
-    background-color: red initial;
-    transform: rotate(10deg);
+
+.caco:hover {
+    transition: .5s;
+    box-shadow: 0 0 20px #F11514 inset;
+    border-radius: 50%;
 }
 
 #musicButton {
