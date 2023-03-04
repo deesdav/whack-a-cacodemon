@@ -103,21 +103,24 @@ h1 {
 .imgs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: baseline;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    width: auto;
 }
 
 .imgs img {
-    width: 33.33%;
-    padding: 1em;
-    height: 490px;
-    transform: scale(0.4);
-    transition: .5s;
-    image-orientation: flip;
+    padding-top: 55px;
+    width: auto;
+    height: auto;
+    zoom: 150%;
+    transition: .5s ease-in-out;
+    border-bottom: 0px solid #ffffffa4;
 }
+
 .imgs img:hover {
-    transition: .5s;
-    box-shadow: 0 0 20px #F11514;
+    transition: .5s ease;
+    border-bottom: 20px solid #f11414c1;
 }
 
 #play {

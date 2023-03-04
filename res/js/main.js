@@ -89,10 +89,10 @@ function randomRound() {
       scoreText.style.display = "none";
       speedText.style.display = "none";
       gameArea9x9.style.display = "none";
-      document.body.style.backgroundRepeat = "";
-      document.body.style.backgroundSize = "";
-      document.body.style.backgroundAttachment = "";
+      document.body.style.backgroundSize = "65%";
+      document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundImage = "url(./res/img/background.gif)";
+      document.body.style.transition = "0s";
       result -= 510;
       score.innerHTML = result + " pts";
       music.src = "";
