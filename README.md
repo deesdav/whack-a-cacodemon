@@ -1,2 +1,2 @@
 # whack-a-cacodemon
-[Play](https://deesdav.github.io/whack-a-doom/)
+[Play](https://deesdav.github.io/whack-a-cacodemon/)
