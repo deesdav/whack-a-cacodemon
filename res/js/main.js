@@ -3,7 +3,7 @@ const info = document.getElementById("info");
 const infoContent = document.getElementById("infoContent");
 const molePlay = document.getElementById("molePlay");
 const music = document.getElementById("music");
-const musicButton = document.getElementById("musicButton");
+const audioBtn = document.getElementById("audioBtn");
 const gameBox = document.getElementById("gameBox");
 const backButton = document.getElementById("backButton");
 const mainStartingContent = document.getElementById("mainStartingContent");
@@ -16,12 +16,34 @@ const cacos = document.querySelectorAll(".caco");
 const score = document.querySelector("#score");
 const speed = document.querySelector("#speed");
 
-musicButton.onmousedown = () => {
-  music.src = "https://www.youtube.com/embed/EQmIBHObtCs?autoplay=1";
-};
-musicButton.onmouseover = () => {
-  music.src = "";
-};
+const audio = new Audio('./res/audio/doom_soundtrack.mp3');
+
+
+
+audioBtn.onclick = () => {
+  audio.play();
+  audio.loop = true;
+  if (audioBtn.innerText == "AUDIO ON") {
+    toggleMute();
+    audioBtn.innerText = "AUDIO OFF";
+  } else if (audioBtn.innerText == "AUDIO OFF") {
+    toggleUnMute();
+    audioBtn.innerText = "AUDIO On";
+  }
+}
+
+function toggleMute() {
+  if (audio.muted) {
+    audio.muted = false;
+  } else {
+    audio.muted = true;
+  }
+}
+
+function toggleUnMute() {
+  audio.muted = !audio.muted;
+}
+
 
 info.onclick = () => {
   backButton.style.display = "block";
@@ -29,7 +51,8 @@ info.onclick = () => {
   info.style.display = "none";
 }
 play.onclick = () => {
-  music.src = "https://www.youtube.com/embed/EQmIBHObtCs?autoplay=1";
+  audio.play();
+  audio.loop = true;
   mainStartingContent.style.display = "none";
   backButton.style.display = "block";
   scoreText.style.display = "block";
@@ -39,7 +62,7 @@ play.onclick = () => {
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.transition = ".5s all";
-  
+
 };
 backButton.onclick = () => {
   music.src = "";

@@ -251,7 +251,7 @@ a {
 
 #speedText {
     position: absolute;
-    top: 110px;
+    top: 95px;
     left: 50px;
     color: white;
     display: none;
@@ -317,7 +317,7 @@ a {
     border-radius: 50%;
 }
 
-#musicButton {
+#audioBtn {
     bottom: 10px;
     left: 10px;
     position: absolute;
@@ -330,7 +330,7 @@ a {
     transition: .5s;
 }
 
-#musicButton:hover {
+#audioBtn:hover {
     background-color: black;
     border: 1px solid white;
     color: white;
