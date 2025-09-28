@@ -18,18 +18,13 @@ const speed = document.querySelector("#speed");
 
 const audio = new Audio('./res/audio/doom_soundtrack.mp3');
 
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
 
-
-audioBtn.onclick = () => {
+function playAudio() {
   audio.play();
   audio.loop = true;
-  if (audioBtn.innerText == "AUDIO ON") {
-    toggleMute();
-    audioBtn.innerText = "AUDIO OFF";
-  } else if (audioBtn.innerText == "AUDIO OFF") {
-    toggleUnMute();
-    audioBtn.innerText = "AUDIO On";
-  }
 }
 
 function toggleMute() {
@@ -44,6 +39,16 @@ function toggleUnMute() {
   audio.muted = !audio.muted;
 }
 
+audioBtn.onclick = () => {
+  playAudio();
+  if (audioBtn.innerText == "AUDIO ON") {
+    toggleMute();
+    audioBtn.innerText = "AUDIO OFF";
+  } else if (audioBtn.innerText == "AUDIO OFF") {
+    toggleUnMute();
+    audioBtn.innerText = "AUDIO ON";
+  }
+}
 
 info.onclick = () => {
   backButton.style.display = "block";
@@ -51,8 +56,7 @@ info.onclick = () => {
   info.style.display = "none";
 }
 play.onclick = () => {
-  audio.play();
-  audio.loop = true;
+  playAudio();
   mainStartingContent.style.display = "none";
   backButton.style.display = "block";
   scoreText.style.display = "block";
@@ -95,7 +99,8 @@ function randomRound() {
 }
 
 [...rounds].forEach((round) => {
-  round.addEventListener("click", (k) => {
+  const eventType = isTouchDevice() ? "touchstart" : "click";
+  round.addEventListener(eventType, (k) => {
     console.log(k);
 
     if (round.id == strikePosi) {
@@ -136,12 +141,4 @@ window.onload = () => {
 function movecaco() {
   timerId = setInterval(randomRound, randomLimit);
 }
-
 movecaco();
-
-molePlay.onmouseover = () => {
-  music.src = "https://www.youtube.com/embed/pDKvYBTZ1i4?autoplay=1";
-}
-molePlay.onmouseout = () => {
-  music.src = "";
-}

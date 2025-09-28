@@ -1,337 +1,529 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap");
 
 * {
-    user-select: none;
-    box-sizing: border-box;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    image-rendering: auto;
+  user-select: none;
+  box-sizing: border-box;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  image-rendering: auto;
 }
 
 body,
 html {
-    height: 100%;
-    margin: auto;
+  height: 100%;
+  margin: auto;
 }
 
 body {
-    background-image: url(../img/background.gif);
-    background-color: black;
-    background-position: center;
-    background-attachment: fixed;
-    transition: .5s all;
-    background-size: 65%;
-    height: 100vh;
-
+  background-image: url(../img/background.gif);
+  background-color: black;
+  background-position: center;
+  background-attachment: fixed;
+  transition: 0.5s all;
+  background-size: 65%;
+  height: 100vh;
 }
 
 #mainStartingContent {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    width: auto;
-    height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: auto;
+  height: 100vh;
 }
 
 h1 {
-    position: absolute;
-    top: 200px;
-    font-size: 50px;
-    color: white;
-    text-shadow: 2px 2px 2px #F11514;
-    text-align: center;
+  position: absolute;
+  top: 200px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px #f11514;
+  text-align: center;
 }
 
 #info {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    color: white;
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: auto;
-    transition: .5s ease;
-    cursor: pointer;
-    font-size: large;
-    border-radius: 1em;
-    text-shadow: 2px 2px 2px red;
-
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  transition: 0.5s ease;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 1em;
+  text-shadow: 2px 2px 2px red;
 }
 
 #info:hover {
-    border: 1px solid rgb(255, 0, 0);
-    background-color: rgb(255, 255, 255);
-    color: #000;
-    text-shadow: none;
-    transition: .5s;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-shadow: none;
+  transition: 0.5s;
 }
 
 #infoContent {
-    background-color: rgb(3, 3, 3);
-    color: white;
-    text-shadow: 0 0 25px #F11514;
-    width: auto;
-    height: 100vh;
-    padding: 1em;
-    margin: auto;
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    transition: .5s all;
+  background-color: rgb(3, 3, 3);
+  color: white;
+  text-shadow: 0 0 25px #f11514;
+  width: auto;
+  height: 100vh;
+  padding: 1em;
+  margin: auto;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: 0.5s all;
 }
 
 .ps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: baseline;
-    align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  align-items: baseline;
 }
 
 .ps p {
-    width: 50%;
-
+  width: 50%;
 }
 
 .imgs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
-    width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  width: auto;
 }
 
 .imgs img {
-    padding-top: 55px;
-    width: auto;
-    height: auto;
-    zoom: 150%;
-    transition: .5s ease-in-out;
-    border-bottom: 0px solid #ffffffa4;
+  padding-top: 55px;
+  width: auto;
+  height: auto;
+  zoom: 150%;
+  transition: 0.5s ease-in-out;
+  border-bottom: 0px solid #ffffffa4;
 }
 
 .imgs img:hover {
-    transition: .5s ease;
-    border-bottom: 20px solid #f11414c1;
+  transition: 0.5s ease;
+  border-bottom: 20px solid #f11414c1;
 }
 
 #play {
-    background-color: transparent;
-    border: 1px solid transparent;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: auto;
-    transition: .5s ease;
-    transition: .2s all;
-    cursor: pointer;
-    font-size: large;
-    border-radius: 1em;
-    text-shadow: 2px 2px 2px #F11514;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  transition: 0.5s ease;
+  transition: 0.2s all;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 1em;
+  text-shadow: 2px 2px 2px #f11514;
 }
 
 #molePlay a {
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: auto;
-    transition: .5s ease;
-    cursor: pointer;
-    font-size: large;
-    border-radius: 1em;
-    text-shadow: 2px 2px 2px red;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    text-decoration: none;
-    font-family: 'Domine', serif;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  transition: 0.5s ease;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 1em;
+  text-shadow: 2px 2px 2px red;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  text-decoration: none;
+  font-family: "Domine", serif;
 }
 
 #molePlay a:hover {
-    transform: scale(1.1);
-    border-radius: 2em;
-    border: 1px solid rgb(255, 0, 0);
-    background-color: rgb(255, 255, 255);
-    color: #000;
-    text-shadow: none;
+  transform: scale(1.1);
+  border-radius: 2em;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-shadow: none;
 }
 
 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 #krtekimg {
-    width: 200px;
-    height: 200px;
-    display: block;
-    position: absolute;
-    top: 0;
-    padding: 0;
-    margin: 0;
-    transition: .5s;
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;
 }
 
 #krtekimg:hover #clickOnMe {
-    display: none;
-    transition: .5s;
+  display: none;
+  transition: 0.5s;
 }
 
 #clickOnMe {
-    text-shadow: 0 1px 0px #F11514;
-    display: block;
-    position: absolute;
-    left: 400px;
-    top: 100px;
-    height: 50px;
-    text-align: center;
-    width: 180px;
-    background: white;
-    color: black;
-    animation: pulse infinite 1000ms ease-in-out;
-    padding: 1em;
-    border-radius: 10px;
-    transition: .5s;
-    cursor: default;
+  text-shadow: 0 1px 0px #f11514;
+  display: block;
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  height: 50px;
+  text-align: center;
+  width: 180px;
+  background: white;
+  color: black;
+  animation: pulse infinite 1000ms ease-in-out;
+  padding: 1em;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: default;
 }
 
 #clickOnMe:hover {
-    display: none;
-    opacity: 0;
-    transition: .5s;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 #backButton {
-    display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: white;
-    color: black;
-    padding: 1em;
-    cursor: pointer;
-    transition: .5s ease;
-    border: none;
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  color: black;
+  padding: 1em;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border: none;
 }
 
 #backButton:hover {
-    background-color: transparent;
-    color: white;
-    text-decoration: underline;
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
 }
 
 #play:hover {
-    transform: scale(1.5);
-    border-radius: 2em;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.49);
+  transform: scale(1.5);
+  border-radius: 2em;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.49);
 }
 
 #scoreText {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    color: white;
-    display: none;
-    font-size: x-large;
-    text-shadow: 0 0 25px #F11514;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: white;
+  display: none;
+  font-size: x-large;
+  text-shadow: 0 0 25px #f11514;
 }
 
 #speedText {
-    position: absolute;
-    top: 95px;
-    left: 50px;
-    color: white;
-    display: none;
-    font-size: x-large;
-    text-shadow: 0 0 25px #F11514;
+  position: absolute;
+  top: 95px;
+  left: 50px;
+  color: white;
+  display: none;
+  font-size: x-large;
+  text-shadow: 0 0 25px #f11514;
 }
 
 #scoreText span {
-    text-shadow: 0 0 25px #F11514;
+  text-shadow: 0 0 25px #f11514;
 }
 
 #speedText span {
-    text-shadow: 0 0 25px #F11514;
+  text-shadow: 0 0 25px #f11514;
 }
 
-
 #gameArea9x9 {
-    padding-top: 90px;
-    width: 625px;
-    height: 625px;
-    display: none;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: auto;
-    cursor: url(../img/cursor.crucible.png), auto;
+  padding-top: 90px;
+  width: 625px;
+  height: 625px;
+  display: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: auto;
+  cursor: url(../img/cursor.crucible.png), auto;
 }
 
 .round {
-    height: 200px;
-    width: 200px;
-
+  height: 200px;
+  width: 200px;
 }
 
 .round:hover {
-    transform: rotate(3deg);
-
+  transform: rotate(3deg);
 }
 
-
-
-
-
 .caco {
-    background-image: url(../img/caco.png);
-    background-position: center;
-    background-size: 75%;
-    background-repeat: no-repeat;
-    cursor: url(../img/cursor.crucible.png), auto;
+  background-image: url(../img/caco.png);
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  cursor: url(../img/cursor.crucible.png), auto;
 }
 
 .crucible {
-    background: gray;
-    width: 200px;
-    height: 200px;
-
+  background: gray;
+  width: 200px;
+  height: 200px;
 }
 
-
-
 .caco:hover {
-    transition: .5s;
-    box-shadow: 0 0 20px #F11514 inset;
-    border-radius: 50%;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #f11514 inset;
+  border-radius: 50%;
 }
 
 #audioBtn {
-    bottom: 10px;
-    left: 10px;
-    position: absolute;
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    border-radius: 1em;
-    padding: 1em;
-    cursor: pointer;
-    transition: .5s;
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  border-radius: 1em;
+  padding: 1em;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 #audioBtn:hover {
-    background-color: black;
-    border: 1px solid white;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+/* --- MOBILNÍ OPTIMALIZACE --- */
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    min-height: 100vh;
+  }
+
+  #mainStartingContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    width: 100vw;
+    min-height: 100vh;
+    border: none;
+    padding: 0;
+    position: relative;
+  }
+
+  h1 {
+    position: static;
+    font-size: 8vw;
+    margin: 6vw 0 4vw 0;
+    text-align: center;
+  }
+
+  #play,
+  #info,
+  #audioBtn,
+  #molePlay a {
+    position: static !important;
+    display: block;
+    width: 80vw;
+    max-width: 350px;
+    margin: 2vw auto !important;
+    font-size: 5vw !important;
+    padding: 3vw 0 !important;
+    border-radius: 1em !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #play {
+    order: 1;
+  }
+  #molePlay {
+    order: 2;
+  }
+  #info {
+    order: 3;
+  }
+  #audioBtn {
+    order: 4;
+  }
+
+  #audioBtn {
+    left: auto !important;
+    bottom: auto !important;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    margin-bottom: 4vw !important;
+  }
+
+  #infoContent {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background: #111;
     color: white;
+    z-index: 100;
+    overflow-y: auto !important;
+    padding: 4vw 2vw 2vw 2vw;
+    box-sizing: border-box;
+  }
+
+  #infoContent.active {
+    display: block !important;
+  }
+
+  #backButton {
+    display: none;
+    position: absolute !important; /* změna z sticky/absolute na static */
+    top: 0px !important;
+    z-index: 101;
+    max-width: 300px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 5.5px !important;
+    padding: 2vw 4vw !important;
+    border-radius: 1em !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  body.game-active #backButton {
+    display: block !important;
+  }
+
+  #infoContent #backButton {
+    display: block !important;
+  }
+
+  .imgs {
+    gap: 4vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .imgs img {
+    width: 40vw !important;
+    height: auto !important;
+    zoom: 100% !important;
+    padding-top: 2vw;
+    display: block;
+    margin: 0 auto 2vw auto;
+    max-width: 90vw;
+  }
+
+  .ps {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .ps p {
+    width: 100%;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+  }
+
+  #scoreText,
+  #speedText {
+    display: none; /* výchozí stav - skryté */
+    position: static;
+    font-size: 5vw;
+    margin: 2vw 0;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+
+  #gameArea9x9 {
+    width: 96vw;
+    height: 96vw;
+    min-width: 0;
+    min-height: 0;
+    gap: 2vw;
+    padding-top: 0;
+    flex-wrap: wrap;
+    display: none;
+    margin: 0 auto;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+
+  .round {
+    width: 28vw !important;
+    height: 28vw !important;
+    min-width: 28vw;
+    min-height: 28vw;
+    margin: 0;
+    font-size: 5vw;
+    border-radius: 2vw;
+  }
+
+  #krtekimg {
+    width: 30vw !important;
+    height: 30vw !important;
+    position: static;
+    margin: 2vw auto;
+    display: block;
+  }
+
+  #clickOnMe {
+    left: 0;
+    top: 0;
+    width: 60vw;
+    font-size: 4vw;
+    position: static;
+    margin: 2vw auto;
+  }
 }
