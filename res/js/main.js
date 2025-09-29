@@ -70,6 +70,7 @@ function startTimer() {
       clearInterval(timerInterval);
       clearInterval(timerId);
       alert("Time's up! Your score: " + result + " pts");
+      location.reload();
       mainStartingContent.style.display = "flex";
       backButton.style.display = "none";
       scoreText.style.display = "none";
@@ -147,6 +148,7 @@ function randomRound() {
       alert(
         "You reached score 300, so now, if you want to play again click on 'ok' and if you want to change speed (difficulty) you must reload the page."
       );
+      location.reload();
       mainStartingContent.style.display = "flex";
       backButton.style.display = "none";
       scoreText.style.display = "none";
